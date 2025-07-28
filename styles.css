@@ -26,25 +26,30 @@ header {
 .menu-icon {
   font-size: 1.8rem;
   cursor: pointer;
+  color:#001f3f;
 }
-
+.hidden{
+  display:none;
+}
 .logo {
   font-size: 1.4rem;
 }
 
 /* 3. Sidebar Navigation */
+/* Hide sidebar by default */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -220px;
-  width: 200px;
+  left: -250px; /* move it off-screen */
+  width: 250px;
   height: 100%;
-  background-color: #003366;
-  padding: 4rem 1rem;
+  background-color: #111;
   transition: left 0.3s ease;
   z-index: 1000;
+  padding: 20px;
 }
 
+/* Show sidebar when .open class is added */
 .sidebar.open {
   left: 0;
 }
@@ -75,20 +80,48 @@ header {
 }
 .intro {
     height: 100%;
-    width: 80%;
+    width: 100%;
     position: absolute;
     left: 0;
     top: 0;
     z-index: 10000;
 }
-.intro h2 {
-  font-size: 2.5rem;
-  padding-top:40%;
+.intro-content h2 {
+    font-size: 2.5rem;
+    padding-top: 40%;
+    text-align: left;
+    padding-left: 7%;
+    color:#001f3f;
 }
-
-.intro p {
-  font-size: 1rem;
-  color: #d6eaff;
+.intro-content h2 span{
+  display: block;
+}
+.intro-content p {
+    font-size: 1.5rem;
+    padding-top: 20%;
+    text-align: left;
+    padding-left: 7%;
+    color: #001f3f;
+    margin-bottom: 30%;
+}
+.intro-content p span{
+  color:#c4dcf0;
+}
+.intro-content a {
+    font-family: "Forum", serif;
+    font-size: 1.3em;
+    background-color: transparent;
+    border: 1px solid #001f3f;
+    border-radius: 2%;
+    color: #001f3f;
+    padding: 5% 8%;
+    transition: 0.5s ease;
+    margin-left: -22%;
+    text-decoration: none;
+}
+.intro-content a:hover{
+  background-color:#001f3f;
+  color:#c4dcf0;
 }
 
 /* 5. Diagonal Shape Decoration */
@@ -118,10 +151,23 @@ header {
 
 .photo-section img {
   max-width: 250px;
-  border-radius: 50%;
-  border: 4px solid #00bfff;
+  /* border-radius: 50%; */
 }
 
+@media (min-width: 480px){
+  .intro h2 {
+    font-size: 3.5rem;
+  }
+  .intro h2 span{
+  display: inline-block;
+  }
+  .intro p {
+    font-size: 1.8rem;
+    padding-top: 10%;
+    margin-bottom: 20%;
+  }
+
+}
 /* 7. Responsive Design for Tablets & Desktop */
 @media (min-width: 768px) {
   .content {
@@ -131,18 +177,45 @@ header {
     padding: 3rem;
   }
 
-  .intro {
-    width: 50%;
-    z-index: 1;
+  .decor-container {
+    width: 60%;
   }
+
+.sharp-box {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background-color: #00bfff; /* Light blue */
+  clip-path: polygon(0 0, 14% 0, 50% 50%, 10% 100%, 0 100%);
+}
+
+  .intro {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    z-index: 10000;
+}
 
   .photo-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%;
     z-index: 1;
+    margin-top:0;
   }
+
+  
+.photo-section img {
+  max-width: 250px;
+  /* border-radius: 50%; */
+}
 
   .intro h2 {
     font-size: 2.2rem;
