@@ -1,0 +1,154 @@
+/* 1. Base Reset and Mobile-first Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Forum", serif;
+  background-color: #001f3f; /* Navy blue */
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 2. Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.menu-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 1.4rem;
+}
+
+/* 3. Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 200px;
+  height: 100%;
+  background-color: #003366;
+  padding: 4rem 1rem;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav li {
+  margin: 1.2rem 0;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* 4. Main Content Area */
+.content {
+    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+.intro {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+}
+.intro h2 {
+  font-size: 2.5rem;
+  padding-top:40%;
+}
+
+.intro p {
+  font-size: 1rem;
+  color: #d6eaff;
+}
+
+/* 5. Diagonal Shape Decoration */
+.decor-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.sharp-box {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background-color: #00bfff; /* Light blue */
+  clip-path: polygon(0 0, 10% 0, 50% 50%, 10% 100%, 0 100%);
+}
+
+/* 6. Profile Photo (Hidden on mobile, visible on larger screens) */
+.photo-section {
+  display: none;
+  margin-top: 2rem;
+}
+
+.photo-section img {
+  max-width: 250px;
+  border-radius: 50%;
+  border: 4px solid #00bfff;
+}
+
+/* 7. Responsive Design for Tablets & Desktop */
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 3rem;
+  }
+
+  .intro {
+    width: 50%;
+    z-index: 1;
+  }
+
+  .photo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    z-index: 1;
+  }
+
+  .intro h2 {
+    font-size: 2.2rem;
+  }
+
+  .intro p {
+    font-size: 1.2rem;
+  }
+}
