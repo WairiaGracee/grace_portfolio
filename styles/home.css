@@ -41,3 +41,35 @@
     border:1px solid #00bfff;
     color:#00bfff;
 }
+
+@media (min-width: 480px){
+    .intro{
+        padding: 16% 0 10%;
+        gap:2rem;
+    }
+    .intro h2{
+        font-size: 1.6em;
+    }
+    .intro h1{
+        font-size:3.5em;
+    }
+    .intro button{
+        width:200px;
+        padding:2.5% 4%;
+    }
+}
+@media (min-width: 768px){
+    .intro{
+        padding: 9% 0 10%;
+    }
+    .intro h2{
+        font-size: 2em;
+    }
+    .intro h1{
+        font-size:4em;
+    }
+    .intro button{
+        width: 270px;
+        padding: 2% 4%;
+    }
+}
