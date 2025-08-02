@@ -1,18 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menu = document.getElementById('menuOpen');
-    const nav = document.getElementById('navwrap');
+// script.js
 
-    menu.addEventListener('click', function(event) {
-        nav.classList.toggle('active');
-        event.stopPropagation(); // prevent triggering the document click
-    });
+const menuToggle = document.getElementById('menu-toggle');
+const closeToggle = document.getElementById('close-toggle');
+const nav = document.getElementById('nav');
 
-    document.addEventListener('click', function(event) {
-        const clickedInsideNav = nav.contains(event.target);
-        const clickedMenuIcon = menu.contains(event.target);
+menuToggle.addEventListener('click', () => {
+  nav.style.display = 'flex';
+});
 
-        if (!clickedInsideNav && !clickedMenuIcon) {
-        nav.classList.remove('active');
-        }
-    });
+closeToggle.addEventListener('click', () => {
+  nav.style.display = 'none';
 });

@@ -1,66 +1,211 @@
-*{
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
-}
-.hidden{
-    display:none;
-}
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background-color: #1d2025;
-    color: #266688;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease;
-    z-index: 1000;
+/* Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header.active {
-    transform: translateX(0);
+body {
+  font-family: 'Playfair Display', serif;
+  background: #111;
+  color: #f8f8f8;
+  padding: 1.2rem;
 }
 
-#menuOpen {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 2rem;
-    color: #00bfff;
-    cursor: pointer;
+img {
+  max-width: 100%;
+  border-radius: 10px;
 }
 
-.nav-wrapper{
-    width: 100%;
-    height: 100%;
-    padding-top: 20%;
-    display: flex;
-    justify-content: center;
-    font-family: "Faculty Glyphic", sans-serif;
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.nav-links{
-    display:flex;
-    flex-direction:column;
-    gap:4%;
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
 }
-.nav-links a{
-    padding:3% 1%;
-    text-decoration:none;
-    text-align:center;
+
+/* Hamburger */
+.menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Nav Menu */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #111;
+  width: 100%;
+  height: 60%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+.nav ul li {
+  margin: 1rem 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #ddd;
+}
+
+.cta-btn {
+  background: #f39c12;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #000;
+  display: inline-block;
+  font-weight: bold;
+  transition:0.5s ease;
+}
+.cta-btn:hover{
+    cursor:pointer;
     background-color: transparent;
-    color:#00bfff;
-    letter-spacing: 1.4px;
-    transition:0.5s ease;
+    border:1px solid #f39c12;
+    color: #f39c12;
 }
-.nav-links a i{
-    display: block;
-    text-align: center;
-    font-size: 1.5em;
-    margin: 10% 0;
+/* Close button */
+.close-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #f39c12;
 }
-.nav-links a:hover{
-    color:#266688;
-    background-color:rgba(38, 102, 136,0.35);
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.intro {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+.hero-image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    padding-left: 10%;
+}
+.hero-img {
+    flex-shrink: 0;
+    width: 70%;
+    height: 30vh;
+}
+.hero-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.scroll-down {
+  font-size: 1.7rem;
+  color: #f39c12;
+  animation: bounce 1.5s infinite;
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@media (min-width: 428px){
+    .hero{
+        height:90vh;
+        gap:1rem;
+    }
+    .hero-img {
+        flex-shrink: 0;
+        width: 70%;
+        height: 70%;
+    }
+}
+
+/* Tablet and Up */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 10%;
+  }
+
+  .hero-text {
+        flex: 1.5;
+        height: 100%;
+    }
+
+  .hero-image-container {
+    padding:0;
+    flex: 1;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .intro {
+    font-size: 1.5rem;
+    color: #aaa;
+}
+  .hero-text h1 {
+        font-size: 4.1rem;
+    }
+
+  .nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    height: auto;
+    justify-content: flex-end;
+    gap: 2rem;
+    background: none;
+  }
+
+  .menu-toggle,
+  .close-toggle {
+    display: none;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav ul li {
+    margin: 0;
+  }
+
+  .cta-btn {
+    margin-left: 1rem;
+  }
 }
