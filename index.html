@@ -8,7 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="header">
+  <div class="head-container">
+    <header class="header">
     <div class="logo">Grace.</div>
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <nav class="nav" id="nav">
@@ -17,8 +18,8 @@
         <li><a href="#">Services</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#" class="cta-btn">Let's Work Together</a></li>
       </ul>
+      <a href="#" class="cta-btn">Let's Work Together</a>
       <div class="close-toggle" id="close-toggle">&times;</div>
     </nav>
   </header>
@@ -29,14 +30,32 @@
       <h1>I craft elegant, responsive websites that bring brands to life and help businesses thrive online.</h1>
     </div>
     <div class="hero-image-container">
-        <div class="scroll-down">
-          <span>&#8595;</span>
-        </div>
       <div class="hero-img">
         <img src="assets/shiku img.jpg" alt="Grace" />
       </div>
   </div>
   </main>
+
+  <section class="about-section">
+    <div class="left-pane">
+      <h5>About</h5>
+      <h1>Turning bold ideas<br>into seamless digital<br>experiences.</h1>
+      <button>More About Me</button>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-dribbble"></i>
+      </div>
+    </div>
+
+    <div class="right-pane">
+      <p>I am a passionate web designer currently pursuing a degree in Computer Science. I blend creativity with technical skill to craft user-friendly, visually engaging websites that not only look great but also perform efficiently.</p>
+
+      <p>My growing knowledge in front-end development, UI/UX design, and responsive web practices allows me to bring digital ideas to life. I'm constantly learning, experimenting, and building — with a focus on clean code, thoughtful design, and creating experiences that truly serve users.</p>
+    </div>
+  </section>
+  </div>
 
   <script src="functionality/header.js"></script>
 </body>
