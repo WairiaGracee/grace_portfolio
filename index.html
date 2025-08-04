@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grace Jane | Portfolio</title>
   <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/hero.css" />
+  <link rel="stylesheet" href="styles/about.css" />
+  <link rel="stylesheet" href="styles/services.css" />
+  <link rel="stylesheet" href="styles/portfolio.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
 </head>
@@ -49,11 +54,135 @@
     </div>
 
     <div class="right-pane">
-      <p>I am a passionate web designer currently pursuing a degree in Computer Science. I blend creativity with technical skill to craft user-friendly, visually engaging websites that not only look great but also perform efficiently.</p>
+      <div class="right-text">
+        <p>I am a passionate web designer currently pursuing a degree in Computer Science. I blend creativity with technical skill to craft user-friendly, visually engaging websites that not only look great but also perform efficiently.</p>
 
       <p>My growing knowledge in front-end development, UI/UX design, and responsive web practices allows me to bring digital ideas to life. I'm constantly learning, experimenting, and building — with a focus on clean code, thoughtful design, and creating experiences that truly serve users.</p>
+      </div>
+      <div class="skills-section">
+        <h2>My Skills</h2>
+
+        <div class="skill">
+          <span>HTML</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 95%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span>CSS</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span>Git</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span>Database Management</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <section class="services-section">
+  <h2>What I Offer</h2>
+    <div class="services">
+      <div class="service-card">
+        <i class="fas fa-pencil-ruler"></i>
+        <h3>Web Designing</h3>
+        <p>I create clean, modern, and user-focused website designs that reflect your brand and vision.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-code"></i>
+        <h3>Frontend Development</h3>
+        <p>I build responsive, interactive websites using HTML, CSS, JavaScript, and Git for version control.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-object-group"></i>
+        <h3>UI/UX Prototyping</h3>
+        <p>I design intuitive user interfaces and smooth user journeys using tools like Figma or Adobe XD.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="assets/cinal med.png" alt="Project 1">
+      <h3>Cinal Med</h3>
+      <p>A responsive website built using HTML, CSS, and JavaScript; built for a clinic</p>
+      <a href="https://cinal-med.netlify.app/" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/decart.png" alt="Project 2">
+      <h3>Decart Events</h3>
+      <p>An e-commerce interface with product filters and dynamic layout.</p>
+      <a href="https://decart.netlify.app/" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x180" alt="Project 3">
+      <h3>Project Three</h3>
+      <p>A portfolio site with animated transitions and dark mode.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x180" alt="Project 4">
+      <h3>Project Four</h3>
+      <p>A blog platform with Markdown support and comment sections.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x180" alt="Project 5">
+      <h3>Project Five</h3>
+      <p>A landing page designed to convert visitors into signups.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+  </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Have a project in mind or just want to say hello?</p>
+
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-email">
+      <p>Or email me directly: <a href="mailto:youremail@example.com">gracejane864@gmail.com</a></p>
+    </div>
+  </section>
+
+
   </div>
 
   <script src="functionality/header.js"></script>

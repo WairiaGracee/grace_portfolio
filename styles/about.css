@@ -1,0 +1,115 @@
+.about-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin-top: 10%;
+}
+
+.left-pane {
+  background: repeating-linear-gradient(
+    to bottom,
+    #2c1f16,
+    #2c1f16 3px,
+    transparent 3px,
+    transparent 10px
+  );
+  color: #fbeedc;
+  padding: 1rem 0;
+}
+
+.left-pane h5 {
+    color: #e68a00;
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.left-pane h1 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+
+.left-pane button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.75rem 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.social-icons i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.right-pane {
+  color: #d0d0d0;
+  padding-top: 2rem;
+}
+
+.right-pane p{
+    line-height:1.6rem;
+}
+
+.skills-section {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+}
+
+.skills-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #fbeedc;
+}
+
+.skill {
+  margin-bottom: 1.6rem;
+}
+
+.skill span {
+  display: block;
+  font-size: 1rem;
+  margin-bottom:1.2rem;
+  color: #ffffff;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #2e2e2e;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #f39c12;
+  transition: width 0.8s ease-in-out;
+}
+
+@media (min-width: 768px){
+      .about-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem;
+    min-height: 100vh;
+  }
+
+  .left-pane {
+    width: 40%;
+    padding-right: 2rem;
+  }
+
+  .left-pane h1 {
+    font-size: 3rem;
+  }
+
+  .right-pane {
+    width: 55%;
+  }
+}
