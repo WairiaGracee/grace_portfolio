@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grace Jane | Portfolio</title>
+  <link rel="stylesheet" href="styles/general.css" />
   <link rel="stylesheet" href="styles/header.css" />
   <link rel="stylesheet" href="styles/hero.css" />
   <link rel="stylesheet" href="styles/about.css" />
@@ -20,17 +21,17 @@
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <nav class="nav" id="nav">
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#" class="cta-btn">Let's Work Together</a>
+      <a href="#contact" class="cta-btn">Let's Work Together</a>
       <div class="close-toggle" id="close-toggle">&times;</div>
     </nav>
   </header>
 
-  <main class="hero">
+  <main class="hero" id="hero">
     <div class="hero-text">
       <p class="intro">Hello, I'm Grace Jane</p>
       <h1>I craft elegant, responsive websites that bring brands to life and help businesses thrive online.</h1>
@@ -40,68 +41,64 @@
       </div>
   </main>
 
-  <section class="about-section">
+  <section class="about-section" id="about">
     <div class="left-pane">
       <h5>About</h5>
       <h1>Turning bold ideas<br>into seamless digital<br>experiences.</h1>
-      <button>More About Me</button>
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-dribbble"></i>
-      </div>
+      <a href="assets/GJ--CV.pdf" class="cv-btn" download>Download CV</a>
+
     </div>
 
     <div class="right-pane">
       <div class="right-text">
-        <p>I am a passionate web designer currently pursuing a degree in Computer Science. I blend creativity with technical skill to craft user-friendly, visually engaging websites that not only look great but also perform efficiently.</p>
+        <p>I am a passionate web designer currently pursuing a degree in Computer Science in Dedan Kimathi University of Technology. I blend creativity with technical skill to craft user-friendly, visually engaging websites that not only look great but also perform efficiently.</p>
 
       <p>My growing knowledge in front-end development, UI/UX design, and responsive web practices allows me to bring digital ideas to life. I'm constantly learning, experimenting, and building — with a focus on clean code, thoughtful design, and creating experiences that truly serve users.</p>
       </div>
-      <div class="skills-section">
-        <h2>My Skills</h2>
+      <section class="skills-section" id="skills">
+  <h2>My Skills</h2>
 
-        <div class="skill">
-          <span>HTML</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 95%"></div>
-          </div>
-        </div>
+  <div class="skill">
+    <span>HTML</span>
+    <div class="progress-bar">
+      <div class="progress" data-width="90%"></div>
+    </div>
+  </div>
 
-        <div class="skill">
-          <span>CSS</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 90%"></div>
-          </div>
-        </div>
+  <div class="skill">
+    <span>CSS</span>
+    <div class="progress-bar">
+      <div class="progress" data-width="85%"></div>
+    </div>
+  </div>
 
-        <div class="skill">
-          <span>JavaScript</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 80%"></div>
-          </div>
-        </div>
+  <div class="skill">
+    <span>JavaScript</span>
+    <div class="progress-bar">
+      <div class="progress" data-width="75%"></div>
+    </div>
+  </div>
 
-        <div class="skill">
-          <span>Git</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 85%"></div>
-          </div>
-        </div>
+  <div class="skill">
+    <span>Git</span>
+    <div class="progress-bar">
+      <div class="progress" data-width="80%"></div>
+    </div>
+  </div>
 
-        <div class="skill">
-          <span>Database Management</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 75%"></div>
-          </div>
-        </div>
-      </div>
+  <div class="skill">
+    <span>Database Management</span>
+    <div class="progress-bar">
+      <div class="progress" data-width="70%"></div>
+    </div>
+  </div>
+</section>
+
 
     </div>
   </section>
 
-  <section class="services-section">
+  <section class="services-section" id="services">
   <h2>What I Offer</h2>
     <div class="services">
       <div class="service-card">
@@ -119,12 +116,12 @@
       <div class="service-card">
         <i class="fas fa-object-group"></i>
         <h3>UI/UX Prototyping</h3>
-        <p>I design intuitive user interfaces and smooth user journeys using tools like Figma or Adobe XD.</p>
+        <p>I design intuitive user interfaces and smooth user journeys using tools like Figma.</p>
       </div>
     </div>
   </section>
 
-  <section class="portfolio-section">
+  <section class="portfolio-section" id="portfolio">
   <h2>My Projects</h2>
   <div class="projects-grid">
 
@@ -132,28 +129,28 @@
       <img src="assets/cinal med.png" alt="Project 1">
       <h3>Cinal Med</h3>
       <p>A responsive website built using HTML, CSS, and JavaScript; built for a clinic</p>
-      <a href="https://cinal-med.netlify.app/" class="btn">View Project</a>
+      <a href="https://cinal-med.netlify.app/" class="btn" target="_blank">View Project</a>
     </div>
 
     <div class="project-card">
       <img src="assets/decart.png" alt="Project 2">
       <h3>Decart Events</h3>
       <p>An e-commerce interface with product filters and dynamic layout.</p>
-      <a href="https://decart.netlify.app/" class="btn">View Project</a>
+      <a href="https://decart.netlify.app/" class="btn" target="_blank">View Project</a>
     </div>
 
     <div class="project-card">
       <img src="https://via.placeholder.com/300x180" alt="Project 3">
       <h3>Project Three</h3>
       <p>A portfolio site with animated transitions and dark mode.</p>
-      <a href="#" class="btn">View Project</a>
+      <a href="#" class="btn" target="_blank">View Project</a>
     </div>
 
     <div class="project-card">
       <img src="https://via.placeholder.com/300x180" alt="Project 4">
       <h3>Project Four</h3>
       <p>A blog platform with Markdown support and comment sections.</p>
-      <a href="#" class="btn">View Project</a>
+      <a href="#" class="btn" target="_blank">View Project</a>
     </div>
 
     <div class="project-card">
@@ -170,11 +167,12 @@
     <h2>Contact Me</h2>
     <p>Have a project in mind or just want to say hello?</p>
 
-    <form class="contact-form" action="#" method="POST">
+    <form class="contact-form" action="https://formspree.io/f/mkgzqryb" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit" onclick="clearInput()">Send Message</button>
+
     </form>
 
     <div class="contact-email">
@@ -186,6 +184,29 @@
   </div>
 
   <script src="functionality/header.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const progressBars = document.querySelectorAll(".progress");
+            progressBars.forEach(bar => {
+              const targetWidth = bar.getAttribute("data-width");
+              bar.style.width = targetWidth;
+            });
+            observer.disconnect(); // animate only once
+          }
+        });
+      });
+
+      const skillsSection = document.querySelector("#skills");
+      observer.observe(skillsSection);
+
+      function clearInput(){
+
+      }
+    });
+</script>
 </body>
 </html>
 

@@ -11,3 +11,5 @@ menuToggle.addEventListener('click', () => {
 closeToggle.addEventListener('click', () => {
   nav.style.display = 'none';
 });
+
+

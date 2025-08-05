@@ -1,0 +1,25 @@
+/* Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.head-container{
+    /* background:url(../assets/840843081452.jpg); */
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+body {
+  font-family: 'Playfair Display', serif;
+  background: #111;
+  color: #f8f8f8;
+  padding: 1.2rem;
+}
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+html {
+  scroll-behavior: smooth;
+}
