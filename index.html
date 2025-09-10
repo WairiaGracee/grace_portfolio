@@ -121,47 +121,50 @@
     </div>
   </section>
 
-  <section class="portfolio-section" id="portfolio">
+<section class="portfolio-section" id="portfolio">
   <h2>My Projects</h2>
-  <div class="projects-grid">
 
-    <div class="project-card">
-      <img src="assets/cinal med.png" alt="Project 1">
-      <h3>Cinal Med</h3>
-      <p>A responsive website built using HTML, CSS, and JavaScript; built for a clinic</p>
-      <a href="https://cinal-med.netlify.app/" class="btn" target="_blank">View Project</a>
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      
+      <!-- Project 1 -->
+      <div class="project-slide">
+        <img src="assets/decart.png" alt="Decart Events">
+        <div class="project-desc">
+          <h3>Decart Events</h3>
+          <p>An e-commerce interface with product filters and dynamic layout.</p>
+          <a href="https://decart.netlify.app/" class="btn" target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-slide">
+        <img src="assets/cinal med.png" alt="Clinic Website">
+        <div class="project-desc">
+          <h3>Clinic Website</h3>
+          <p>A clean, responsive design for a healthcare clinic with contact and service sections.</p>
+          <a href="https://clinicdemo.netlify.app/" class="btn" target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-slide">
+        <img src="assets/bmtow.png" alt="Towing Company">
+        <div class="project-desc">
+          <h3>Towing Company (In Progress)</h3>
+          <p>A business website with service booking features and a modern dashboard.</p>
+          <a href="#" class="btn" target="_blank">Coming Soon</a>
+        </div>
+      </div>
+
     </div>
 
-    <div class="project-card">
-      <img src="assets/decart.png" alt="Project 2">
-      <h3>Decart Events</h3>
-      <p>An e-commerce interface with product filters and dynamic layout.</p>
-      <a href="https://decart.netlify.app/" class="btn" target="_blank">View Project</a>
-    </div>
-
-    <div class="project-card">
-      <img src="https://via.placeholder.com/300x180" alt="Project 3">
-      <h3>Project Three</h3>
-      <p>A portfolio site with animated transitions and dark mode.</p>
-      <a href="#" class="btn" target="_blank">View Project</a>
-    </div>
-
-    <div class="project-card">
-      <img src="https://via.placeholder.com/300x180" alt="Project 4">
-      <h3>Project Four</h3>
-      <p>A blog platform with Markdown support and comment sections.</p>
-      <a href="#" class="btn" target="_blank">View Project</a>
-    </div>
-
-    <div class="project-card">
-      <img src="https://via.placeholder.com/300x180" alt="Project 5">
-      <h3>Project Five</h3>
-      <p>A landing page designed to convert visitors into signups.</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
+    <!-- Arrows -->
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
   </div>
-  </section>
+</section>
+
 
   <section class="contact-section" id="contact">
     <h2>Contact Me</h2>
@@ -184,6 +187,7 @@
   </div>
 
   <script src="functionality/header.js"></script>
+  <script src="functionality/portfolio.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const observer = new IntersectionObserver((entries, observer) => {
