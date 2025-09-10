@@ -8,6 +8,7 @@
 /* Wrapper */
 .slider-wrapper {
   display: flex;
+  transform: translateX(0); 
   transition: transform 0.5s ease;
 }
 
