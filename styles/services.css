@@ -49,21 +49,22 @@
   .services {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .service-card {
-    flex: 1;
-    max-width: 32%;
+    flex: 1 0 300px;
   }
   .services-section h2 {
     font-size: 3.2rem;
     margin-bottom: 2.4rem;
     color: #fbeedc;
-    }
+    text-align: center;
+  }
   .service-card i{
     font-size: 3.4em;
     margin-bottom: 11%;
-}
+  }
 
 .service-card h3 {
     margin-bottom: 0.8rem;
